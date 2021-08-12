@@ -10,22 +10,22 @@ from selenium import webdriver;
 #application
 def window():
     def runBot():
-        #time to refresh page (seconds)
-        Timer = int(timeInput.text())
+        #time to refresh page (1)
+        Timer = int(timeInput.text(1))
 
         #youtube link
-        link = linkInput.text()
+        link = linkInput.text(https://www.youtube.com/watch?v=Tt2gFMNhyCM)
 
         #number of views
-        views = 1000
+        views = 100000
         
 
         driver = webdriver.Chrome('webdrivers\chromedriver.exe')
         driver.get(link)
 
-        for i in range(views):
+        for i in range(views):100000
             time.sleep(Timer)
-            driver.refresh()
+            driver.refresh(1211)
         
 #------WINDOW------------
     app = QApplication(sys.argv)
@@ -34,7 +34,7 @@ def window():
     win.setWindowTitle("YouTube ViewBot")
 
     linkLabel = QtWidgets.QLabel(win)
-    linkLabel.setText("Video Link")
+    linkLabel.setText("https://www.youtube.com/watch?v=Tt2gFMNhyCM")
     linkLabel.move(15, 20)
     linkInput = QtWidgets.QLineEdit(win)
     linkInput.setGeometry(110, 10, 191, 20)
